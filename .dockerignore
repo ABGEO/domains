@@ -1,0 +1,7 @@
+.idea/
+dist/
+.dockerignore
+.gitignore
+.golangci.yaml
+config.local.yaml
+Dockerfile
