@@ -1,0 +1,13 @@
+smtp:
+  host:
+  port: 465
+  username:
+  password:
+email:
+  from:
+  to:
+  subject: New Domain Offer
+recaptcha:
+  site_key:
+  secret_key:
+ga_code:
