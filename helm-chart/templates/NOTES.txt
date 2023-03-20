@@ -1,0 +1,7 @@
+Chart Name: {{  .Chart.Name }}
+Chart Version: {{  .Chart.Version }}
+App Version: {{  .Chart.AppVersion }}
+Ingress Domains:
+{{- range .Values.ingress.domains }}
+  - https://{{ . }}
+{{- end }}

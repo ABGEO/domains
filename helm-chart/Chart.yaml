@@ -1,0 +1,10 @@
+apiVersion: v2
+name: abgeos-domains
+description: A Helm chart for abgeos-domains project
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+maintainers:
+  - name: Temuri Takalandze
+    email: me@abgeo.dev
+    url: https://abgeo.dev
