@@ -46,7 +46,16 @@ func (controller DefaultController) Submit(ctx *gin.Context) {
 		return
 	}
 
-	if err := mailerService.Send(formData.Email, "offer", formData); err != nil {
+	emailData := map[string]string{
+		"Domain":  ctx.Request.Host,
+		"Name":    formData.Name,
+		"Surname": formData.Surname,
+		"Email":   formData.Email,
+		"Phone":   formData.Phone,
+		"Message": formData.Message,
+	}
+
+	if err := mailerService.Send(formData.Email, "offer", emailData); err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{
 			"success": false,
 			"error":   err.Error(),
